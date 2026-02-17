@@ -39,17 +39,21 @@ class Character:
     
     def heal(self, amount):
         """Heal HP"""
+        old_hp = self.hp
         self.hp += amount
         if self.hp > self.max_hp:
             self.hp = self.max_hp
-        return amount
+        actual_heal = self.hp - old_hp
+        return actual_heal
     
     def restore_mp(self, amount):
         """Restore MP"""
+        old_mp = self.mp
         self.mp += amount
         if self.mp > self.max_mp:
             self.mp = self.max_mp
-        return amount
+        actual_restore = self.mp - old_mp
+        return actual_restore
     
     def basic_attack(self, target):
         """Perform basic attack on target"""

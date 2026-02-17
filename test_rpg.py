@@ -3,8 +3,6 @@
 Test script for RPG game functionality
 """
 import sys
-sys.path.insert(0, '/home/runner/work/-/-')
-
 from character import Player, Enemy
 from items import create_item, Potion, Weapon, Armor
 from combat import create_enemy
